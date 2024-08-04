@@ -1,0 +1,148 @@
+
+
+
+
+.elemento {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    width: max-content;
+    position: relative;
+    list-style: none;
+    padding: 20px 50px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+    background-color: var(--Details);
+    transition: 1.5s;
+}
+
+
+
+
+
+
+.elemento li {
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border-top: 1px solid #000000;
+    border-left: 2px solid #000;
+    transition: all .7s;
+   
+    transform: translateY(0px);
+}
+
+
+.elemento li:hover{
+    position: relative;
+    scale: 1.2;
+    z-index: 1;
+}
+
+.elemento:has(li:nth-child(1):hover)  {
+    z-index: 1;
+    background-color: aqua;
+    transition: all 1.5s;
+}
+.elemento:has(li:nth-child(2):hover)  {
+    z-index: 1;
+    background-color: yellow;
+    transition: all 1.5s;
+}
+.elemento:has(li:nth-child(3):hover)  {
+    z-index: 1;
+    background-color: rgb(59, 59, 59);
+    transition: all 1.5s;
+}
+
+.elemento:has(li:hover) :not(:hover){
+    opacity: .7;
+    scale: .8;
+    transition: all 0.25s;
+}
+
+
+
+.overlay {
+    background-color: var(--Details);
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: fit-content;
+    height: 70px;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 0 10px 0 10px;
+}
+
+.a {
+
+    transform: translateY(0px);
+    animation:
+     bounce 0.5s 0.1s both,
+      opa 0.5s 0.2s both;
+
+}
+
+
+
+
+@keyframes bounce {
+    from {
+
+        transform: translateY(0px);
+    }
+
+    to {
+
+        transform: translateY(130px);
+    }
+}
+
+@keyframes opa {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.b{
+    opacity: 1;
+    transform: translateY(130px);
+    animation:
+    bounceB 0.5s 0.1s both,
+    opaB 0.3s 0.1s both;
+}
+
+@keyframes bounceB {
+    from {
+transform: translateY(130px);
+       
+    }
+
+    to {
+ transform: translateY(0px);
+        
+    }
+}
+
+@keyframes opaB {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

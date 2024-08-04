@@ -1,0 +1,23 @@
+:root{
+    --bg-colorBlack: rgb(187, 187, 187);
+    --bg-backTwo: rgb(0, 0, 0);
+    --bg-secondaryColor:rgb(187, 187, 187);
+    --Details:rgb(68, 124, 124);
+
+    --blue:rgba(0, 255, 255, 0.1);
+    --yellow:rgba(255, 255, 0, 0.1);
+    --black:rgba(0, 0, 0, 0.1);
+}
+
+.blue{
+background-color:var(--blue);
+}
+.yellow{
+background-color:var(--yellow);
+    
+}
+.black{
+background-color:var(--black);
+    
+}
+

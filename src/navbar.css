@@ -1,0 +1,104 @@
+a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+header{
+    z-index: 100;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav{
+    margin: 40px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: fit-content;
+    cursor: pointer;
+}
+
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(22, 22, 22);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translate(-100%) ;
+    transition: all 0.3s ease-in;
+}
+
+.nav-list li{
+   margin-left: 0;
+   opacity: 0;
+   transform: translateX(55px);
+}
+
+.nav-list.active{
+    transform: translate(0);
+}
+
+.menu{
+    position: sticky;
+    z-index: 100;
+    width: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu div{
+    width: 50px;
+    height: 7px;
+    border-radius:5px;
+    background: #000000;
+    margin: 3px 8px 3px 8px;
+    transition: 0.3s;
+}
+
+
+
+@keyframes navLinkFrame{
+    from{
+        opacity: 0;
+        transform: translateX(55px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+    background-color: #fff;
+}
+.menu.active .line2{
+    opacity: 0;
+}
+.menu.active .line3{
+    transform: rotate(45deg) translate(-10px, -10px);
+    background-color: #fff;
+
+}
